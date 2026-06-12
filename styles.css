@@ -20,7 +20,7 @@
   --col-center: 52.4fr;
   --col-right: 18.49fr;
   --grid-gap: 1.46%; /* 28/1920 */
-  --donate-w: 66.76%; /* 237/355 */
+  --donate-w: 86.76%; /* 308/355 */
   --social-gap: 2.03%; /* 39/1920 */
   --social-size: 2.08%; /* 40/1920 */
   --right-gap: 8.15vh; /* 88/1080 */
@@ -212,15 +212,50 @@ body {
 }
 
 .donate {
-  width: min(100%, 237px);
+  width: min(100%, 308px);
   align-self: center;
 }
 
-.donate picture,
-.donate img {
+.donate__link {
   display: block;
   width: 100%;
-  height: auto;
+  color: inherit;
+  text-decoration: none;
+}
+
+.donate__card {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 130px;
+  padding: 7px 10px 7px 7px;
+  background: #000;
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  border-radius: 16px;
+}
+
+.donate__qr {
+  flex: 0 0 auto;
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 47%;
+  object-fit: contain;
+}
+
+.donate__text {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--white);
 }
 
 .copyright {
@@ -540,7 +575,7 @@ body {
   }
 
   .donate {
-    width: min(100%, 237px);
+    width: min(100%, 308px);
   }
 }
 
@@ -606,12 +641,42 @@ body {
   }
 
   .right {
-    width: min(100%, 282px);
+    width: min(100%, calc(100vw - 24px));
     gap: 40px;
   }
 
   .donate {
+    width: 75%;
+  }
+
+  .donate__card {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 16px 14px;
+    border-radius: 12px;
+    gap: 12px;
+    background: #000;
+    border-color: #fff;
+  }
+
+  .donate__text {
+    order: -1;
+    flex: 0 0 auto;
     width: 100%;
+    text-align: center;
+    font-size: clamp(15px, 4.5vw, 21px);
+    line-height: 1.15;
+  }
+
+  .donate__br {
+    display: none;
+  }
+
+  .donate__qr {
+    width: min(88vw, 260px);
+    height: auto;
+    max-width: none;
   }
 
   .copyright {
@@ -632,6 +697,6 @@ body {
   }
 
   .right {
-    width: min(100%, 260px);
+    width: min(100%, calc(100vw - 24px));
   }
 }
