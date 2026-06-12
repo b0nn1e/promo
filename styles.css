@@ -234,6 +234,13 @@ body {
   background: #000;
   border: 1.5px solid rgba(255, 255, 255, 0.92);
   border-radius: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donate__link:hover .donate__card,
+.donate__link:focus-visible .donate__card {
+  border-color: var(--accent);
+  box-shadow: 0 0 16px rgba(242, 194, 50, 0.35);
 }
 
 .donate__qr {
