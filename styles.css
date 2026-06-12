@@ -143,15 +143,17 @@ body {
 .socials {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
   gap: clamp(10px, 1.6vw, 24px);
+  width: 70%;
+  margin-top: -60px;
 }
 
 .socials a {
-  display: block;
-  width: clamp(30px, 2.8vw, 40px);
-  height: clamp(30px, 2.8vw, 40px);
-  flex-shrink: 0;
+  flex: 1 1 0;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
   transition: opacity 0.2s ease;
 }
 
@@ -308,16 +310,10 @@ body {
 
   .socials {
     flex: 0 0 auto;
-    height: 3.7vh;
     align-self: center;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-between;
+    width: 70%;
     gap: var(--social-gap);
-  }
-
-  .socials a {
-    width: clamp(28px, 2.08vw, 40px);
-    height: clamp(28px, 2.08vw, 40px);
   }
 
   /* Center: heading pinned to top, cube centered in remaining space */
@@ -468,11 +464,6 @@ body {
     gap: clamp(10px, 1.6vw, 24px);
   }
 
-  .socials a {
-    width: clamp(30px, 2.8vw, 40px);
-    height: clamp(30px, 2.8vw, 40px);
-  }
-
   .center {
     display: flex;
   }
@@ -534,12 +525,7 @@ body {
   }
 
   .socials {
-    justify-content: center;
-  }
-
-  .socials a {
-    width: clamp(30px, 4.5vw, 38px);
-    height: clamp(30px, 4.5vw, 38px);
+    justify-content: space-between;
   }
 
   .donate {
@@ -603,13 +589,8 @@ body {
 
   .socials {
     position: static;
-    justify-content: center;
+    justify-content: space-between;
     gap: clamp(8px, 2.8vw, 16px);
-  }
-
-  .socials a {
-    width: clamp(28px, 8vw, 36px);
-    height: clamp(28px, 8vw, 36px);
   }
 
   .right {
