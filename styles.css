@@ -426,6 +426,32 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  .donate__card {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 12px 10px;
+    gap: 10px;
+    border-color: #fff;
+  }
+
+  .donate__text {
+    order: -1;
+    flex: 0 0 auto;
+    width: 100%;
+    text-align: center;
+    font-size: clamp(13px, 0.95vw, 16px);
+    line-height: 1.15;
+  }
+
+  .donate__qr {
+    width: min(100%, 200px);
+    height: auto;
+    max-width: none;
+  }
+}
+
 @media (min-width: 1025px) and (max-width: 1439px) {
   :root {
     --body-pad-x: 5%;
