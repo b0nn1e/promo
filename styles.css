@@ -67,7 +67,7 @@ body {
 }
 
 .hero__bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -2;
   background: url("./assets/full-hero.png") center / cover no-repeat;
@@ -75,7 +75,7 @@ body {
 
 .hero::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -1;
   background: linear-gradient(
@@ -205,6 +205,7 @@ body {
 
 .donate {
   width: min(100%, 237px);
+  align-self: center;
 }
 
 .donate picture,
@@ -492,8 +493,8 @@ body {
       "center center"
       "left right";
     align-items: start;
-    gap: 16px;
-    margin-top: 14px;
+    gap: 28px;
+    margin-top: 28px;
   }
 
   .center {
@@ -505,7 +506,7 @@ body {
     justify-self: center;
     justify-items: center;
     text-align: center;
-    gap: 14px;
+    gap: 24px;
   }
 
   .right {
@@ -513,7 +514,7 @@ body {
     justify-self: center;
     align-items: center;
     width: min(100%, 355px);
-    gap: 20px;
+    gap: 28px;
   }
 
   .cube {
@@ -526,6 +527,8 @@ body {
 
   .socials {
     justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: -60px;
   }
 
   .donate {
@@ -565,13 +568,13 @@ body {
       "left"
       "right";
     justify-items: center;
-    margin-top: 6px;
-    gap: 10px;
+    margin-top: 16px;
+    gap: 32px;
   }
 
   .center {
     width: 100%;
-    margin-top: -6px;
+    margin-top: 0;
   }
 
   .cube {
@@ -579,7 +582,7 @@ body {
   }
 
   .left {
-    gap: 8px;
+    gap: 20px;
     justify-items: center;
   }
 
@@ -591,11 +594,12 @@ body {
     position: static;
     justify-content: space-between;
     gap: clamp(8px, 2.8vw, 16px);
+
   }
 
   .right {
     width: min(100%, 282px);
-    gap: 14px;
+    gap: 40px;
   }
 
   .donate {
@@ -606,7 +610,7 @@ body {
     position: static;
     transform: none;
     width: auto;
-    margin-top: 10px;
+    margin-top: 40px;
   }
 }
 
